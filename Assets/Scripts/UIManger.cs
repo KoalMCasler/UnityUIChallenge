@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class UIManger : MonoBehaviour
 {
@@ -46,5 +47,11 @@ public class UIManger : MonoBehaviour
         float RanValue = Random.Range(MinRandom, MaxRandom);
         int PassValue = (int)RanValue;
         UpdateScore(PassValue);   
+    }
+    public void QuitGame()
+    {
+        //Debug line to test quit function in editor
+        //UnityEditor.EditorApplication.isPlaying = false;
+        Application.Quit();
     }
 }
